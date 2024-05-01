@@ -34,7 +34,9 @@ def get_pv_power(latitude, longitude, surface_tilt, surface_azimuth, peak_power)
     latest_year = data.index[-1].year #data is returned as a 10 year timeseries. We select the most recent year
     
     pvpower = data.loc[data.index.year == latest_year]['P']
+    pvpower.rename ("Power (kW)", inplace = True)
     pvpower_annual_sum = pvpower.sum()/1000 #Returns value in MWh
+    
 
 
     return pvpower, pvpower_annual_sum
