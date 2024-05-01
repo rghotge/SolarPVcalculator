@@ -49,7 +49,7 @@ with col2:
                       peak_power= ppeak)
         st.write("Annual Energy: ", pvpower_annual_sum, " MWh")
         #st.write(pvpower)
-        st.line_chart(pvpower, y = "Power (kW)")
+        st.line_chart(pvpower, y = "Power (W)")
 
 
 st.header("Assumptions")
