@@ -35,7 +35,7 @@ def get_pv_power(latitude, longitude, surface_tilt, surface_azimuth, peak_power)
     
     pvpower = data.loc[data.index.year == latest_year]['P']
     pvpower.rename ("Power (kW)", inplace = True)
-    pvpower_annual_sum = pvpower.sum()/1000 #Returns value in MWh
+    pvpower_annual_sum = pvpower.sum()/1000000 #Returns value in MWh
     
 
 
